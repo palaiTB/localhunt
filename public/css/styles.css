@@ -1,0 +1,24 @@
+html, body {
+    background-color: #dfdfdf;
+    color: #black;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 3.2rem;
+    margin-right: 3.2rem;
+    /*font-weight: 200;*/
+    /*margin: 0;*/
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+.loader img{
+    position: absolute;
+    width: 20%;
+    left: 39%;
+    top: 30%;
+}
