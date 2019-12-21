@@ -1862,24 +1862,49 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Check",
   data: function data() {
     return {
-      news: []
+      news: [],
+      range: 10,
+      page: 1,
+      load: false
     };
   },
-  methods: {},
-  created: function created() {
-    var _this = this;
+  methods: {
+    hello: function hello() {
+      var _this = this;
 
-    fetch("https://localwire.me/wp-json/wl/v1/posts/", {
-      method: 'GET'
-    }).then(function (response) {
-      return response.json();
-    }).then(function (jsonData) {
-      _this.news = jsonData;
-    });
+      this.load = true;
+      setTimeout(function () {
+        _this.loadmore();
+      }, 2000);
+    },
+    loadmore: function loadmore() {
+      var _this2 = this;
+
+      fetch("https://localwire.me/wp-json/wl/v1/posts?per_page=" + this.range, {
+        method: 'GET'
+      }).then(function (response) {
+        return response.json();
+      }).then(function (jsonData) {
+        _this2.news = jsonData;
+      });
+      this.page++;
+      this.range += 10;
+      this.load = false;
+    }
+  },
+  created: function created() {
+    this.loadmore();
   }
 });
 
@@ -37333,7 +37358,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "container mt-4 mb-4 animated fadeIn slow" },
+    {
+      staticClass: "container mt-4 mb-4 animated fadeIn slow",
+      attrs: { id: "digest" }
+    },
     [
       _c("h2", [_vm._v("News Digest!")]),
       _vm._v(" "),
@@ -37386,7 +37414,40 @@ var render = function() {
             ])
           ]
         )
-      })
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "text-center" }, [
+        _c("img", {
+          directives: [
+            {
+              name: "show",
+              rawName: "v-show",
+              value: _vm.load,
+              expression: "load"
+            }
+          ],
+          attrs: { width: "30%", src: "images/loader2.gif", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.load,
+                expression: "!load"
+              }
+            ],
+            staticClass: "btn btn-outline-info",
+            on: { click: _vm.hello }
+          },
+          [_vm._v("More Posts")]
+        )
+      ])
     ],
     2
   )
@@ -52533,7 +52594,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.vue");
+/* harmony import */ var _components_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Home */ "./resources/js/components/Home.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -52547,8 +52608,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]);
 
 var routes = [{
-  path: '/home',
-  component: _components_Home__WEBPACK_IMPORTED_MODULE_3__["default"]
+  path: '/home1',
+  component: _components_Home__WEBPACK_IMPORTED_MODULE_2__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
