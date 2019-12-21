@@ -11,6 +11,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
+import VueScrollProgressBar from '@guillaumebriday/vue-scroll-progress-bar'
+Vue.use(VueScrollProgressBar);
+
+import VModal from 'vue-js-modal'
+Vue.use(VModal, { dynamic: true, dynamicDefaults: { clickToClose: false } });
+
 import Home from "./components/Home";
 
 let routes = [
@@ -35,7 +41,6 @@ let router = new VueRouter({
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('check', require('./components/Check.vue').default);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
