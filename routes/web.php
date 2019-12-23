@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/bhubaneswar', 'MainController@index');
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('{path}', 'HomeController@index')->where( 'path' , '([A-z\d\-\/_.]+)?' );
+Route::get('{path}', 'MainController@index')->where( 'path' , '([A-z\d\-\/_.]+)?' );
 

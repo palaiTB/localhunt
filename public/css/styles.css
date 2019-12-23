@@ -1,24 +1,57 @@
-html, body {
-    background-color: #dfdfdf;
-    color: #black;
-    font-family: 'Raleway', sans-serif;
-    margin-left: 3.2rem;
-    margin-right: 3.2rem;
-    /*font-weight: 200;*/
-    /*margin: 0;*/
+@media only screen and (min-width: 768px) {
+    html, body {
+        background-color: #dfdfdf;
+        color: black;
+        font-family: 'Raleway', sans-serif;
+        /*padding-left: 3.2rem;*/
+        /*padding-right: 3.2rem ;*/
+        /*font-weight: 200;*/
+        /*margin: 0;*/
+    }
+
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: white;
+    }
+    .loader img{
+        position: absolute;
+        width: 20%;
+        left: 39%;
+        top: 30%;
+    }
 }
-.loader {
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 9999;
-    background-color: white;
+
+.button {
+    width: auto;
+    text-align: center;
+    color: #000;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: inline-block;
 }
-.loader img{
-    position: absolute;
-    width: 20%;
-    left: 39%;
-    top: 30%;
+
+.button-2 {
+    color: #fff;
+    border: 3px solid #3490dc;
+    border-radius: 50px;
+    padding: 3px 10px;
+    background-image: -webkit-linear-gradient(30deg, #3490dc 50%, white 50%);
+    background-image: linear-gradient(30deg, #3490dc 50%, white 50%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    -webkit-transition: background 300ms ease-in-out;
+    transition: background 300ms ease-in-out;
 }
+.button-2:hover {
+    background-position: 100%;
+    color: #3490dc;
+}
+
+

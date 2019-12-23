@@ -3,6 +3,8 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -17,10 +19,25 @@ Vue.use(VueScrollProgressBar);
 import VModal from 'vue-js-modal'
 Vue.use(VModal, { dynamic: true, dynamicDefaults: { clickToClose: false } });
 
-import Home from "./components/Home";
+import VueDisqus from 'vue-disqus'
+Vue.use(VueDisqus);
+
+import Sources from "./components/Sources";
+import LocalWire from "./components/LocalWire";
 
 let routes = [
-    {path: '/home1', component: Home},
+    {
+        path: '/bhubaneswar/:src',
+        name: 'external',
+        component: Sources,
+        props: true
+    },
+    {
+        path: '/bhubaneswar',
+        component: LocalWire,
+        name: 'localwire',
+        props: true
+    },
 ];
 
 let router = new VueRouter({
@@ -40,7 +57,8 @@ let router = new VueRouter({
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('check', require('./components/Check.vue').default);
+Vue.component('localwire-news', require('./components/LocalWire.vue').default);
+Vue.component('sources', require('./components/Sources.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

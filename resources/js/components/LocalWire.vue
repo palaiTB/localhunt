@@ -1,20 +1,20 @@
 <template>
 
     <div class="container mt-4 mb-4 animated fadeIn slow" id="digest">
-        <h2>News Digest!</h2>
+        <h2>News Digest - Localwire</h2>
         <br>
-        <div class="card mb-3 shadow-sm p-3 bg-white rounded" style="max-width: 100%;" v-for="(n, index) in news" :key="index">
+        <div class="card mb-3  shadow-sm p-3 bg-white rounded" style="max-width: 100%;" v-for="(n, index) in news" :key="index">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img class="rounded" style="max-width: 100%; min-height: 100%" :src="n.media" alt="">
+                    <img class="rounded" style="max-width: 100%;padding-top: 1.6rem" :src="n.media" alt="">
+                    <p class="card-text"><small class="text-muted">{{n.date}}</small></p>
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bolder">{{n.title}}</h5>
                         <p class="card-text">{{n.excerpt}}</p>
-                        <p class="card-text"><small class="text-muted">{{n.date}}</small></p>
 <!--                        <a :href="n.permalink"  class="btn btn-outline-dark stretched-link">Read More</a>-->
-                        <button class="btn btn-secondary" @click="trigger(n)">Read More</button>
+                        <button class="button stretched-link btn-sm button-2" @click="trigger(n)">Read More</button>
                     </div>
                 </div>
             </div>
@@ -24,13 +24,12 @@
 
             <img  v-show="load" width="30%" src="images/loader2.gif" alt="">
             <br>
-            <button v-show="!load" @click="hello" class="btn btn-outline-info">More Posts</button>
+            <button v-show="!load" @click="hello" class="button button-2">More Posts</button>
         </div>
 
         <vue-scroll-progress-bar background-color="#0080FF" height="3px"></vue-scroll-progress-bar>
-        <div style="margin-top: 3rem !important;">
-            <modals-container style="margin-top: 2rem !important; margin-bottom: 2rem !important"></modals-container>
-        </div>
+        <modals-container></modals-container>
+
     </div>
 
 </template>
@@ -39,6 +38,9 @@
     import CustomModal from "./CustomModal";
     export default {
         name: "Check",
+        props:{
+          source: String
+        },
         data(){
             return{
                 news: [],
@@ -57,12 +59,14 @@
                         content: data.content,
                         date: data.date,
                         author: data.author,
-                        link: data.permalink
+                        link: data.permalink,
+                        id: data.id
                      },
                     {
                     height: 'auto',
                     scrollable: true,
-                    adaptive: true
+                    resizable: true,
+                    adaptive: true,
                     },
                     {
                     'before-close': (event) => { console.log('this will be called before the modal closes'); }
@@ -93,10 +97,15 @@
         },
         created() {
             this.loadmore();
+            console.log(this.source)
         }
     }
 </script>
 
 <style scoped>
-
+    .btn-sm{
+        opacity: 0;
+        margin-top: -2rem;
+        margin-bottom: -6rem;
+    }
 </style>
