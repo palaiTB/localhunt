@@ -8,74 +8,76 @@
         <div class="row">
             <div class="col-lg-4 border-right col-xs-12">
                 <div class="container mt-4 mb-4">
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                            <th scope="col">Browse By:</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr><td>CAA</td></tr>
-                        <tr><td>Section 144 imposed</td></tr>
-                        <tr><td>IPL Auctions</td></tr>
-                        <tr><td>News</td></tr>
-                        <tr><td>Perfect ReCapture</td></tr>
-                        <tr><td>Petrol Diesel Price</td></tr>
-                        </tbody>
-
-                    </table>
+                    <a href="https://play.google.com/store/apps/details?id=me.localwire&hl=en"><img src="images/Logo.jpeg" style="max-width: 100%" alt=""></a>
+                    <popular-posts></popular-posts>
                     <div class="text-center">
-                        <button class="button button-2">View More</button>
+                        <router-link to="/bhubaneswar" class="button button-2">View More</router-link>
                     </div>
 
                     <hr>
-                    <h6 class="font-weight-bold">News Digest!</h6>
+                    <h6 class="font-weight-bold">News Sources</h6>
 
                     <br>
 
                     <div class="row mb-3">
                         <div class="col-lg-4 col-4">
-                            <router-link to="/bhubaneswar/source"><img src="https://www.freshercooker.in/wp-content/uploads/2019/10/0-9.jpeg" style="max-width: 80px;" alt=""></router-link>
+                            <router-link :to="{name: 'external', params: {src: 'TIE', name: 'Indian Express', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzAXVrOvu_ay1FzzAgi4zockZoITmHleShLl8PuaWDkA4GjB_0'} }"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzAXVrOvu_ay1FzzAgi4zockZoITmHleShLl8PuaWDkA4GjB_0" style="max-width: 80px" alt=""></router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7MUiuedqOHZ1H0b5U1l9s1SjDxhISaDQL5jfRNJp-xDitq_wf" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src: 'KNK', name: 'Kanak News', image: 'https://pbs.twimg.com/profile_images/642028562711638020/CWykgTk-.jpg'} }"><img src="https://pbs.twimg.com/profile_images/642028562711638020/CWykgTk-.jpg" style="max-width: 80px" alt=""></router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://seeklogo.net/wp-content/uploads/2014/08/samsung-logo-preview.png" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src: 'DRT', name: 'Dharitri News', image: 'https://media.licdn.com/dms/image/C560BAQE0SdnOy7GHWg/company-logo_200_200/0?e=2159024400&v=beta&t=zaI-aeeD84kqDOq26aoOiR9ot4vT_9z8BtT4Hs2jRgA'} }" ><img src="https://media.licdn.com/dms/image/C560BAQE0SdnOy7GHWg/company-logo_200_200/0?e=2159024400&v=beta&t=zaI-aeeD84kqDOq26aoOiR9ot4vT_9z8BtT4Hs2jRgA" style="max-width: 80px" alt=""></router-link>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <div class="col-lg-4 col-4">
                             <router-link
-                                :to="{name: 'external', params: {src:'TOI', name: 'Times of India'}}">
+                                :to="{name: 'external', params: {src:'TOI', name: 'Times of India', image:'https://pbs.twimg.com/profile_images/1282407636/icon_512.png'}}">
                                 <img src="https://pbs.twimg.com/profile_images/1282407636/icon_512.png" style="max-width: 80px;" alt="">
                             </router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://images.squarespace-cdn.com/content/v1/5cb636ea93a63267f424e168/1557132988464-36QGJD3T9BUQ1Q2MN68R/ke17ZwdGBToddI8pDm48kPJXHKy2-mnvrsdpGQjlhod7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmrMDYraMJMCQwFxTSOIP7LpSBEQpA-g5k6VTjWbSuadHJq0dp98hg5AZvIaPb3DoM/the_guardian_icon.png" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src:'OTV', name: 'Odisha TV', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuZuNgyWLvQV8HvyKy1qt4Lx61Ohx7mUNQ365UY4lLouI7rRsq'}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSuZuNgyWLvQV8HvyKy1qt4Lx61Ohx7mUNQ365UY4lLouI7rRsq" style="max-width: 80px" alt=""></router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2PX2Q0FUUJasiiR49vi4C0fNmjpnWHKoaOmJgSwI5CuEZG8_I" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src:'NIE', name: 'New Indian Express', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKdX56cJIoBW_55bJHJhRaujKNKx9lXsIdSIdUtjsLQ5WEe7-e'}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSKdX56cJIoBW_55bJHJhRaujKNKx9lXsIdSIdUtjsLQ5WEe7-e" style="max-width: 80px" alt=""></router-link>
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row mb-3">
                         <div class="col-lg-4 col-4">
                             <router-link :to="{name: 'localwire', params: {source: 'LocalWire'} }"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRllbn1vzcYswkUfiORGrv5ntZB-vDcFHBFWtMwe26ObmmjZ7Cl" style="max-width: 80px;" alt=""></router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3vnrdDSAWgrv6RSJ9z9Pzy0NlM9TKdZ4kniJ8nojUVIg54Zse" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src: 'SBD', name: 'Sambad', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3vnrdDSAWgrv6RSJ9z9Pzy0NlM9TKdZ4kniJ8nojUVIg54Zse'} }"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3vnrdDSAWgrv6RSJ9z9Pzy0NlM9TKdZ4kniJ8nojUVIg54Zse" style="max-width: 80px" alt=""></router-link>
                         </div>
                         <div class="col-lg-4 col-4">
-                            <a href=""><img src="https://surfshark.com/wp-content/uploads/2019/09/beebom-1.png" style="max-width: 80px" alt=""></a>
+                            <router-link :to="{name: 'external', params: {src: 'PRM', name: 'Prameya', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0egWYFL2TeZ55xhazRHfeoYqqMgBD9VfKoRNsVUDGILu5kLQV'}}"><img class="pt-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS0egWYFL2TeZ55xhazRHfeoYqqMgBD9VfKoRNsVUDGILu5kLQV" style="max-width: 80px;height: 80px" alt=""></router-link>
                         </div>
                     </div>
+
+                    <div class="row mb-3">
+                        <div class="col-lg-4 col-4">
+                            <router-link
+                                :to="{name: 'external', params: {src:'PRG', name: 'Pragativadi', image:'https://incredibleorissa.com/wp-content/uploads/Pragativadi-Paper.jpg'}}">
+                                <img src="https://incredibleorissa.com/wp-content/uploads/Pragativadi-Paper.jpg" style="max-width: 80px; height: 80px" alt="">
+                            </router-link>
+                        </div>
+                        <div class="col-lg-4 col-4">
+                            <router-link :to="{name: 'external', params: {src:'ORP', name: 'Orissa Post', image:'https://simplyodisha.com/wp-content/uploads/2018/04/OrissaPost-Newspaper.jpg'}}"><img src="https://simplyodisha.com/wp-content/uploads/2018/04/OrissaPost-Newspaper.jpg" style="max-width: 80px; height: 80px" alt=""></router-link>
+                        </div>
+                        <div class="col-lg-4 col-4">
+                            <router-link :to="{name: 'external', params: {src:'ODR', name: 'Odisha Reporter', image:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYtYzOsqIjmFEETyJmd36DFtdzMStygungkcbNhAm4FeywWIKi'}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSYtYzOsqIjmFEETyJmd36DFtdzMStygungkcbNhAm4FeywWIKi" style="max-width: 80px" alt=""></router-link>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
             <div class="col-lg-8">
-                <router-view></router-view>
+                <router-view :key="$route.fullPath"></router-view>  <!-- Very important. As I am trying to access the same component through different routes and props. I use the key to specify the vue router of the full path-->
             </div>
         </div>
 

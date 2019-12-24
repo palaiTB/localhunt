@@ -5,7 +5,7 @@
         <div class="card mb-3  shadow-sm p-3 bg-white rounded" style="width: 100%; height: 50%" v-for="(n, index) in news[0]" :key="index">
             <div class="row no-gutters">
                 <div class="col-md-4">
-                    <img src="https://pbs.twimg.com/profile_images/1282407636/icon_512.png" style="max-width: 100%; " alt="">
+                    <img :src="image" style="max-width: 100%; " alt="">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
@@ -19,9 +19,10 @@
 
         <div class="text-center">
             <br>
-            <img  v-show="load" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1f430a36197347.57135ca19bbf5.gif" width="30%" alt="">
+            <img  v-show="load===true" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/1f430a36197347.57135ca19bbf5.gif" width="30%" alt="">
             <br>
             <button @click="more" v-show="!load" class="button button-2">More Posts</button>
+            <button v-show="load===12" @click="scrollTop" class="button button-2">Scroll Up</button>
         </div>
 
         <vue-scroll-progress-bar background-color="#0080FF" height="3px"></vue-scroll-progress-bar>
@@ -33,7 +34,8 @@
     export default {
         name: "Sources",
         props:{
-            name:String
+            name:String,
+            image: String
         },
         data(){
           return{
@@ -41,10 +43,14 @@
               api:'',
               news:[],
               load: true,
-              limit:10
+              limit:10,
           }
         },
         methods:{
+            scrollTop()
+            {
+              window.scrollTo(0,0);
+            },
             api_call()
             {
                 fetch(this.api , {
@@ -56,9 +62,18 @@
 
                     .then((jsonData) =>{
                         this.news = (JSON.parse(JSON.stringify(jsonData)));
-                    });
+                        if(this.news[0].length< this.limit)
+                        {
+                            this.load = 12; //random number to hide the loader
 
-                setTimeout(() => {this.load = false}, 3000);
+                        }
+                        else
+                        {
+                            setTimeout(() => {this.load = false}, 2500);
+                        }
+                    });
+                this.api = this.base_url;
+
             },
 
             more()
@@ -69,7 +84,8 @@
             }
         },
         created() {
-            this.api = this.base_url+(this.$route.params.src);
+            this.base_url = this.base_url+(this.$route.params.src);
+            this.api = this.base_url;
             this.api_call()
         }
     }
