@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="loader" style="color: black">
-        <img src="images/loader1.gif">
+        <img src="images/preview.gif">
     </div>
     <div class="container-fluid" style="background-color: white !important;">
         <div class="row">
