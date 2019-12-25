@@ -19,7 +19,7 @@
             </tr>
             </tbody>
         </table>
-        <modals-container></modals-container>
+<!--        <modals-container></modals-container>-->
     </div>
 </template>
 
@@ -28,9 +28,12 @@
     import _ from 'lodash'
     export default {
         name: "Popular",
+        props:{
+          keys: Number
+        },
         data(){
             return{
-                arr:[]
+                arr:[],
             }
         },
         methods:{

@@ -78,6 +78,7 @@
 
             <div class="col-lg-8">
                 <router-view :key="$route.fullPath"></router-view>  <!-- Very important. As I am trying to access the same component through different routes and props. I use the key to specify the vue router of the full path-->
+                <modals-container></modals-container>
             </div>
         </div>
 

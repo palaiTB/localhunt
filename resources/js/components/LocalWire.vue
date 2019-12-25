@@ -28,7 +28,7 @@
         </div>
 
         <vue-scroll-progress-bar background-color="#0080FF" height="3px"></vue-scroll-progress-bar>
-        <modals-container></modals-container>
+
 
     </div>
 
@@ -97,7 +97,6 @@
         },
         created() {
             this.loadmore();
-            console.log(this.source)
         }
     }
 </script>

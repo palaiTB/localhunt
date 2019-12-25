@@ -2330,7 +2330,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.loadmore();
-    console.log(this.source);
   }
 });
 
@@ -2377,6 +2376,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Popular",
+  props: {
+    keys: Number
+  },
   data: function data() {
     return {
       arr: []
@@ -38920,9 +38922,7 @@ var render = function() {
       _vm._v(" "),
       _c("vue-scroll-progress-bar", {
         attrs: { "background-color": "#0080FF", height: "3px" }
-      }),
-      _vm._v(" "),
-      _c("modals-container")
+      })
     ],
     2
   )
@@ -38949,45 +38949,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container" },
-    [
-      _c("table", { staticClass: "table table-hover" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "tbody",
-          _vm._l(_vm.arr, function(n, index) {
-            return _c("tr", { key: index }, [
-              _c(
-                "td",
-                {
-                  staticClass: "row",
-                  on: {
-                    click: function($event) {
-                      return _vm.trigger(n)
-                    }
-                  }
-                },
-                [
-                  _vm._m(1, true),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-10 col-10" }, [
-                    _c("p", [_vm._v(_vm._s(n.title))])
-                  ])
-                ]
-              )
-            ])
-          }),
-          0
-        )
-      ]),
+  return _c("div", { staticClass: "container" }, [
+    _c("table", { staticClass: "table table-hover" }, [
+      _vm._m(0),
       _vm._v(" "),
-      _c("modals-container")
-    ],
-    1
-  )
+      _c(
+        "tbody",
+        _vm._l(_vm.arr, function(n, index) {
+          return _c("tr", { key: index }, [
+            _c(
+              "td",
+              {
+                staticClass: "row",
+                on: {
+                  click: function($event) {
+                    return _vm.trigger(n)
+                  }
+                }
+              },
+              [
+                _vm._m(1, true),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-lg-10 col-10" }, [
+                  _c("p", [_vm._v(_vm._s(n.title))])
+                ])
+              ]
+            )
+          ])
+        }),
+        0
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
