@@ -75,9 +75,17 @@
 
 </div>
 </body>
+
+<footer class="text-center">
+    Copyright <img src="https://img.icons8.com/ultraviolet/17/000000/copyright.png"> 2019 | Localwire
+</footer>
+
 </html>
 
 <script>
+
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
     $(document).ready(function() {
         $(window).on('load', function() {
             function Preloader() {
@@ -87,7 +95,7 @@
                 // preloader.delay (1500) .slideUp(500);
             }
             if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
-                // sessionStorage.setItem( 'doNotShow', true );
+                sessionStorage.setItem( 'doNotShow', true );
                 Preloader();
             }
             else {

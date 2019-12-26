@@ -6,7 +6,7 @@
     </div>
     <div class="container-fluid" style="background-color: white !important;">
         <div class="row">
-            <div class="col-lg-4 border-right col-xs-12">
+            <div class="col-lg-3 border-right col-xs-12">
                 <div class="container mt-4 mb-4">
                     <a href="https://play.google.com/store/apps/details?id=me.localwire&hl=en"><img src="images/Logo.jpeg" style="max-width: 100%" alt=""></a>
                     <popular-posts></popular-posts>
@@ -19,7 +19,7 @@
 
                     <br>
 
-                    <div class="row mb-3">
+                    <div class="row mb-4">
                         <div class="col-lg-4 col-4">
                             <router-link :to="{name: 'external', params: {src: 'TIE', name: 'Indian Express', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzAXVrOvu_ay1FzzAgi4zockZoITmHleShLl8PuaWDkA4GjB_0'} }"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQzAXVrOvu_ay1FzzAgi4zockZoITmHleShLl8PuaWDkA4GjB_0" style="max-width: 80px" alt=""></router-link>
                         </div>
@@ -76,11 +76,16 @@
                 </div>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-lg-6">
                 <router-view :key="$route.fullPath"></router-view>  <!-- Very important. As I am trying to access the same component through different routes and props. I use the key to specify the vue router of the full path-->
                 <modals-container></modals-container>
             </div>
+
+            <div class="col-lg-3 mt-4">
+                <a class="weatherwidget-io hide_mobile" href="https://forecast7.com/en/20d3085d82/bhubaneswar/" data-label_1="BHUBANESWAR" data-label_2="WEATHER" data-theme="original" >BHUBANESWAR WEATHER</a>
+            </div>
         </div>
+
 
     </div>
 @endsection
