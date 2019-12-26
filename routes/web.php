@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/bhubaneswar', 'MainController@index');
+Route::get('/', 'MainController@index');
 
 Auth::routes();
 

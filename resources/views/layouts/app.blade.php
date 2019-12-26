@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-white shadow-sm justify-content-end">
         <div class="container-fluid">
             <div class="d-flex flex-nowrap w-100"> <!-- for the toggler and navbar to stay on the same line -->
-                <a class="navbar-brand" href="/bhubaneswar"><img src="https://239795-735906-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/local-wire1-copy-1-2.png" width="17%" alt=""></a>
+                <a class="navbar-brand" href="/"><img src="https://239795-735906-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2019/03/local-wire1-copy-1-2.png" width="17%" alt=""></a>
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
             </button>

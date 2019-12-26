@@ -54263,7 +54263,7 @@ var routes = [{
   component: _components_Sources__WEBPACK_IMPORTED_MODULE_5__["default"],
   props: true
 }, {
-  path: '/bhubaneswar',
+  path: '/',
   component: _components_LocalWire__WEBPACK_IMPORTED_MODULE_6__["default"],
   name: 'localwire',
   props: true

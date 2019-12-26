@@ -33,7 +33,7 @@ let routes = [
         props: true
     },
     {
-        path: '/bhubaneswar',
+        path: '/',
         component: LocalWire,
         name: 'localwire',
         props: true
