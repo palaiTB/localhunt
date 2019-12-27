@@ -97,7 +97,7 @@
                 // preloader.delay (1500) .slideUp(500);
             }
             if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
-                // sessionStorage.setItem( 'doNotShow', true );
+                sessionStorage.setItem( 'doNotShow', true );
                 Preloader();
             }
             else {
