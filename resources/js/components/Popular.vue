@@ -3,7 +3,7 @@
         <table class="table table-hover">
             <thead>
             <tr>
-                <th class="pt-5" scope="col">What's Popular <img class="pb-1" src="https://img.icons8.com/metro/15/000000/filled-star.png"></th>
+                <th class="pt-5" scope="col">What's Popular !! <img class="pb-1" src="https://img.icons8.com/metro/15/000000/filled-star.png"></th>
             </tr>
             </thead>
             <tbody>
@@ -19,7 +19,6 @@
             </tr>
             </tbody>
         </table>
-<!--        <modals-container></modals-container>-->
     </div>
 </template>
 
