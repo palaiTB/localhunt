@@ -68,5 +68,5 @@ Vue.component('popular-posts', require('./components/Popular.vue').default);
 
 const app = new Vue({
     el: '#app',
-    router
+    router,
 });

@@ -3,7 +3,7 @@
     <div class="container mt-4 mb-4 animated fadeIn slow" id="digest">
         <h2>News Digest - Localwire</h2>
         <br>
-        <div class="card mb-3  shadow-sm p-3 bg-white rounded" style="max-width: 100%;" v-for="(n, index) in news" :key="index">
+        <div class="card mb-3  test_shadow p-3 bg-white rounded" style="max-width: 100%;" v-for="(n, index) in news" :key="index">
             <div class="row no-gutters">
                 <div class="col-md-4">
                     <img class="rounded" style="max-width: 100%;padding-top: 1.6rem" :src="n.media" alt="">

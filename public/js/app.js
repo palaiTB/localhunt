@@ -2371,7 +2371,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -38839,7 +38838,7 @@ var render = function() {
           "div",
           {
             key: index,
-            staticClass: "card mb-3  shadow-sm p-3 bg-white rounded",
+            staticClass: "card mb-3  test_shadow p-3 bg-white rounded",
             staticStyle: { "max-width": "100%" }
           },
           [
@@ -38990,7 +38989,7 @@ var staticRenderFns = [
     return _c("thead", [
       _c("tr", [
         _c("th", { staticClass: "pt-5", attrs: { scope: "col" } }, [
-          _vm._v("What's Popular "),
+          _vm._v("What's Popular !! "),
           _c("img", {
             staticClass: "pb-1",
             attrs: {
@@ -39054,7 +39053,7 @@ var render = function() {
           "div",
           {
             key: index,
-            staticClass: "card mb-3  shadow-sm p-3 bg-white rounded",
+            staticClass: "card mb-3 test_shadow p-3 bg-white rounded",
             staticStyle: { width: "100%", height: "50%" }
           },
           [

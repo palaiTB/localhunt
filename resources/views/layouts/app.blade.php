@@ -22,6 +22,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 </head>
 <body>
 <div id="app">
@@ -90,12 +91,12 @@
         $(window).on('load', function() {
             function Preloader() {
                 var preloader = $ ('.loader');
-                preloader.delay(4000) .fadeOut (1000);
+                preloader.delay(3000) .fadeOut (1000);
                 // var preloader = $('.preloader');
                 // preloader.delay (1500) .slideUp(500);
             }
             if ( ! sessionStorage.getItem( 'doNotShow' ) ) {
-                sessionStorage.setItem( 'doNotShow', true );
+                // sessionStorage.setItem( 'doNotShow', true );
                 Preloader();
             }
             else {

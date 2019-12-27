@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 border-right">
                 <router-view :key="$route.fullPath"></router-view>  <!-- Very important. As I am trying to access the same component through different routes and props. I use the key to specify the vue router of the full path-->
                 <modals-container></modals-container>
             </div>
@@ -85,7 +85,6 @@
                 <a class="weatherwidget-io hide_mobile" href="https://forecast7.com/en/20d3085d82/bhubaneswar/" data-label_1="BHUBANESWAR" data-label_2="WEATHER" data-theme="original" >BHUBANESWAR WEATHER</a>
             </div>
         </div>
-
 
     </div>
 @endsection
