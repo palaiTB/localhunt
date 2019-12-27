@@ -77,7 +77,7 @@
 </body>
 
 <footer class="text-center">
-    Copyright <img src="https://img.icons8.com/ultraviolet/17/000000/copyright.png"> 2019 | Localwire
+    Copyright <img src="https://img.icons8.com/ultraviolet/17/000000/copyright.png"> 2019 | Localwire.
 </footer>
 
 </html>
