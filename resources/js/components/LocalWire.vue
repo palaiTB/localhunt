@@ -5,10 +5,6 @@
         <br>
         <div class="card mb-3  test_shadow p-3 bg-white rounded" style="max-width: 100%;" v-for="(n, index) in news" :key="index">
             <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img class="rounded" style="max-width: 100%;padding-top: 1.6rem" :src="n.media" alt="">
-                    <p class="card-text"><small class="text-muted">{{n.date}}</small></p>
-                </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bolder">{{n.title}}</h5>
@@ -16,6 +12,10 @@
 <!--                        <a :href="n.permalink"  class="btn btn-outline-dark stretched-link">Read More</a>-->
                         <button class="button stretched-link btn-sm button-2" @click="trigger(n)">Read More</button>
                     </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded" style="max-width: 100%;margin-top: 1.6rem" :src="n.media" alt="">
+                    <p class="card-text"><small class="text-muted">{{n.date}}</small></p>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@
 </template>
 
 <script>
-    import CustomModal from "./CustomModal";
+    import CustomModal from "./Modals/CustomModal";
     export default {
         name: "Check",
         props:{

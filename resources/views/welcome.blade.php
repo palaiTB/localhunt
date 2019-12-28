@@ -8,7 +8,10 @@
         <div class="row">
             <div class="col-lg-3 border-right col-xs-12">
                 <div class="container mt-4 mb-4">
-                    <a href="https://play.google.com/store/apps/details?id=me.localwire&hl=en"><img src="images/Logo.jpeg" style="max-width: 100%" alt=""></a>
+                    <a href="https://play.google.com/store/apps/details?id=me.localwire&hl=en"><img class="rounded test_shadow" src="images/Logo.jpeg" style="max-width: 100%" alt=""></a>
+                    <br>
+                    <img class="mt-3 rounded test_shadow" src="images/modi.jpg" width="100%" alt="">
+                    <br>
                     <popular-posts></popular-posts>
                     <div class="text-center">
                         <router-link to="/bhubaneswar" class="button button-2">View More</router-link>
@@ -83,6 +86,14 @@
 
             <div class="col-lg-3 mt-4">
                 <a class="weatherwidget-io hide_mobile" href="https://forecast7.com/en/20d3085d82/bhubaneswar/" data-label_1="BHUBANESWAR" data-label_2="WEATHER" data-theme="original" >BHUBANESWAR WEATHER</a>
+                <holidays></holidays>
+                <br>
+                <functional-calendar
+                    :change-month-function='true' :change-year-function='true'
+                    :is-date-picker='true'
+                    ></functional-calendar>
+
+                <hr>
             </div>
         </div>
 

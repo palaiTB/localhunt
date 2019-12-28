@@ -79,6 +79,50 @@
 </body>
 
 <footer class="text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 text-left">
+                <h5 class="font-weight-bolder" style="color: white">Corporate Info</h5>
+                <a style="color: white" href="">About Us</a> <br>
+                <a style="color: white"  href="">Our Advertisers</a> <br>
+                <a style="color: white"  href="">Community</a> <br>
+                <a style="color: white"  href="">Careers</a> <br>
+            </div>
+            <div class="col-lg-3 text-left">
+                <h5 class="font-weight-bolder" style="color: white">Support</h5>
+                <a style="color: white" href="">FAQs</a> <br>
+                <a style="color: white"  href="">Contact Localwire</a> <br>
+                <a style="color: white"  href="">Community Guidelines</a> <br>
+            </div>
+            <div class="col-lg-3 text-left">
+                <h5 class="font-weight-bolder" style="color: white">Partnerships</h5>
+                <a style="color: white" href="">Advertise on Localwire</a> <br>
+            </div>
+            <div class="col-lg-3 text-left">
+                <h5 class="font-weight-bolder" style="color: white">Security</h5>
+                <a style="color: white" href="">Copyright</a> <br>
+                <a style="color: white"  href="">Terms of Use</a> <br>
+                <a style="color: white"  href="">Privacy Policy</a> <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="width: 20%; margin: auto">
+        <div class="col-3">
+            <img src="https://img.icons8.com/nolan/30/facebook-new.png">
+        </div>
+        <div class="col-3">
+            <img src="https://img.icons8.com/nolan/30/twitter.png">
+        </div>
+        <div class="col-3">
+            <img src="https://img.icons8.com/nolan/30/google-logo.png">
+        </div>
+        <div class="col-3">
+            <img src="https://img.icons8.com/nolan/30/instagram-new.png">
+        </div>
+    </div>
+
+    <br>
     Copyright <img src="https://img.icons8.com/ultraviolet/17/000000/copyright.png"> 2019 | Localwire.
 </footer>
 

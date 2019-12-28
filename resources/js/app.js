@@ -22,6 +22,11 @@ Vue.use(VModal, { dynamic: true, dynamicDefaults: { clickToClose: false } });
 import VueDisqus from 'vue-disqus'
 Vue.use(VueDisqus);
 
+import FunctionalCalendar from 'vue-functional-calendar';
+Vue.use(FunctionalCalendar, {
+    dayNames: ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su']
+});
+
 import Sources from "./components/Sources";
 import LocalWire from "./components/LocalWire";
 
@@ -60,6 +65,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('localwire-news', require('./components/LocalWire.vue').default);
 Vue.component('sources', require('./components/Sources.vue').default);
 Vue.component('popular-posts', require('./components/Popular.vue').default);
+Vue.component('holidays', require('./components/misc/Holidays.vue').default);
+Vue.component('profile', require('./components/Profile.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

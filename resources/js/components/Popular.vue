@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import CustomModal from "./CustomModal";
+    import CustomModal from "./Modals/CustomModal";
     import _ from 'lodash'
     export default {
         name: "Popular",

@@ -4,15 +4,16 @@
         <br>
         <div class="card mb-3 test_shadow p-3 bg-white rounded" style="width: 100%; height: 50%;" v-for="(n, index) in news[0]" :key="index">
             <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img :src="image" style="max-width: 100%; " alt="">
-                </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title font-weight-bolder">{{n.Title}}</h5>
                         <p class="card-text">{{n.Date}}</p>
                         <a target="_blank" :href="n.Link"  class="button button-2 stretched-link">Read More</a>
                     </div>
+                </div>
+
+                <div class="col-md-4">
+                    <img class="rounded" :src="image" style="max-width: 100%; " alt="">
                 </div>
             </div>
         </div>

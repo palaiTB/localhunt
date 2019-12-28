@@ -23,7 +23,7 @@
 
 @media only screen and (min-width: 768px) {
     html, body {
-        background-color: #dfdfdf;
+        background-color: white;
         color: black;
         font-family: 'Raleway', sans-serif;
         /*padding-left: 3.2rem;*/
@@ -85,7 +85,7 @@ footer{
 }
 
 .test_shadow{
-    box-shadow: 10px 10px 5px grey;
+    box-shadow: 5px 5px 5px grey;
 }
 
 
